@@ -1,15 +1,22 @@
 {
-  "name": "sss",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "thisistheapplication",
+  "version": "1.2.3",
+  "description": "application stuff ",
+  "main": "index.js",
   "dependencies": {
-    "node.js": "^0.0.0"
+    "body-parser": "^1.17.1",
+    "file-system": "^2.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.17.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "any",
+    "keyword"
+  ],
+  "author": "dini",
   "license": "ISC"
 }
