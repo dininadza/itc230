@@ -1,4 +1,4 @@
-'use strict'
+"use strict"; 
 
 let book = require("./public/book.js");
 
@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
-app.use(express.static(__dirname + '/public')) 
+app.use(express.static(__dirname + '/public'));
 app.use(require("body-parser").urlencoded({extended: true})); 
 
 //handle bars 
@@ -15,6 +15,7 @@ app.engine(".html", handlebars({extname: '.html'}));
 app.set("view engine", ".html");
 
 //send static file as a response 
+
 //home page
 app.get('/', function(req,res){
     res.type('text/html');
@@ -29,13 +30,13 @@ app.get('/about', function(req,res){
 
 //delete
 app.get('/delete', function(req,res){
-    var result = book.delete(req.query.title); // delete book object
+    let result = book.delete(req.query.title); // delete book object
     res.render('delete', {title: req.query.title, result: result});
 });
 
 //details
 app.post('/get', function(req,res){
-    console.log(req.body)
+    console.log(req.body);
     var header = 'Searching for: ' + req.body.title + '<br>';
     var found = book.get(req.body.title);
     res.render("details", {title: req.body.title, result: found});
